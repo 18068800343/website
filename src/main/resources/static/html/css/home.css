@@ -1,0 +1,360 @@
+body{
+	overflow-x: hidden;
+}
+.logo{
+	width: 50px;
+	margin-bottom: 10px;
+	margin-top: -10px;
+}
+.logo_div{
+	/*margin-top: 14px;*/
+	margin-left: 15px;
+	display: inline-block;
+	margin-left: 200px;
+}
+.navigation{
+	float: right;
+	
+}
+.btn{
+	width: 130px;
+	border: none;
+	/*padding: 30px 0px;*/
+	border-radius: 0;
+	border-bottom: 2px solid transparent;
+}
+.btn:hover{
+	background-color: white;
+	border-bottom: 2px solid #33A1FF;
+    color: #33A1FF;
+}
+/*========================================================banner==================================================*/
+.banner{
+	/*height:850px;*/
+	background-image: url(../img/timg.jpg);
+}
+.banner h1{
+	color: white;
+	font-size: 50px;
+	/*text-align:left;*/
+	margin-top: 16%;
+	/*margin-left: 30%;*/
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
+.banner p{
+	color: white;
+	margin-left: 150px;
+	font-size: 20px;
+}
+.banner a{
+	height: 20px;
+	width: 200px;
+	line-height: 0px;
+	position: relative;
+	left: 130px;
+	top: 300px;
+	margin-left: 20px
+}
+.banner a:first-of-type{
+	background-color:transparent;
+	color: white;
+	border: 2px solid white;
+}
+/*=======================================================主区域========================================*/
+.first p{
+	color: #777777;
+	font-size: 20px;
+	padding:30px;
+}
+.survey{
+	width: 500px;
+	display: inline-block;
+	border: 2px solid #5766b8;
+	border-radius:10px;
+	padding: 20px;
+	margin-left: 30px;
+	height: 500px;
+	vertical-align: middle;
+	padding-top: 80px;
+	box-shadow:1px 1px 7px;
+}
+.survey p{
+	font-size: 16px;
+	
+	margin-top: 15px;
+	line-height:45px;
+	color: #777777;
+}
+/*============================================================新闻=====================================================*/
+.new_title{
+	font-size:30px;
+	margin-left: 185px;
+	margin-top: 100px;
+	margin-bottom: 20px;
+}
+.newsdiv{
+	width: 500px;
+	display: inline-block;
+	border: 2px solid #5766b8;
+	border-radius:10px;
+	margin-left: 30px;
+	height: 510px;
+	vertical-align: middle;
+	box-shadow:1px 1px 7px;
+}
+.newsdiv img{
+	width: 496px;
+}
+.newdiv2{
+	margin-top: 30px;
+	margin-left: 10px;
+}
+.newdiv2 p:first-child{
+	color: #3f51b5;
+}
+.newdiv2 p:last-of-type{
+	color: #777777;
+}
+.ahref{
+	color: #ff9c09;
+	float: right;
+	margin-right: 20px;
+}
+
+.news{
+	text-align:center;
+}
+/*===============================================================================合作企业=============================================================================*/
+.cooperative{
+	margin-top: 70px;
+	margin-bottom: 70px;
+}
+.cooperative_logo img{
+	width: 150px;
+	margin:50px;
+}
+/*===============================================================================轮播======================================================================*/
+.item{
+	height: 800px;
+}
+.img-responsive{
+	width: 100%;
+}
+
+.carousel-inner{
+	border: 3px solid #5766b8;
+}
+.foot_logo{
+	width: 50px;
+	margin:20px;
+}
+.foot_a{
+	float: right;
+	margin: 30px;
+	margin-right: 300px;
+}
+.foot_a a{
+	margin:0px 50px;
+	color: #777777;
+}
+.foot_a img{
+	width: 30px;
+}
+.footer{
+	background-color: #3f51b5;
+	height: 30px;
+	clear: both;
+	color: white;
+	line-height: 30px;	
+}
+.footer span:first-of-type{
+	margin-left: 20px;
+}
+.footer span:last-of-type{
+	float: right;
+	margin-right: 20px;
+}
+/*============================================================更新======================================================*/
+.carousel-inner{
+	border: 0px solid red;
+	height: 700px;
+}
+.firstright,.firstleft{
+	height: 400px;
+	border-radius: 10px;
+	width: 28%;
+	margin: 0 auto;
+	margin-right: 30px;
+}
+.firstright:hover{
+	opacity: 0.5;
+}
+.firstleft:hover{
+	opacity: 0.5;
+}
+.jiantou{
+	height: 50px;
+}
+.firstdiv img{
+	width: 20px;
+}
+.dl p{
+	display: inline-block;
+	margin-left: 20px;
+	font-size: 16px;
+}
+.dl{
+	height: 40px;
+	margin-left: 30px;
+}
+.xbt{
+	font-size: 22px;
+	margin: 30px 30px;
+	color: #33A1FF;
+}
+.secdiv{
+	background-image: url(../img/xueshan2.jpg);
+	background-size: 100%;
+	/*-webkit-filter: brightness(80%);*/
+	background-position-y: -120px;
+	height:350px;
+	margin-top: 100px;
+}
+.secdiv2{
+	background-image: url(../img/13.jpg);
+	background-size: 120%;
+	/*-webkit-filter: brightness(80%);*/
+	/*background-position-y: -120px;*/
+	height:350px;
+	margin-top: 100px;
+}
+.thirddiv{
+	margin-top: 100px;
+}
+.nr{
+	margin-bottom: 300px !important;
+}
+.nr p{
+	line-height: 30px;
+}
+.nr p:first-of-type{
+	font-weight: bold;
+}
+.bg{
+	background-color: #f2F9FF;
+	position: absolute;
+	height: 350px;
+	width:800px;
+	margin-top: -70px;
+	z-index: -1;
+	margin-left: -200px;
+	border-radius:0px 50px 50px 0px;
+}
+.foot{
+	background-color: #0D1726;
+	height: 350px;
+	margin-top: 50px;
+}
+.xxk{
+	color: white;
+	text-align: center;
+	margin-top: 40px;
+}
+.xxk a{
+	display: block;
+	color: white;
+	text-decoration: none;
+	line-height: 40px;
+}
+.xxk p{
+	font-size: 18px;
+	font-weight: bold;
+}
+.mbx{
+	height: 50px;
+	background-color: #f5f5f5;
+	clear: both;
+	line-height: 50px;
+}
+.mbx p{
+	margin-left: 230px;
+}
+.neir{
+	margin: 0 auto;
+	/*text-align: center;*/
+	width: 1200px;
+	margin-top:50px;
+}
+.neir p:first-of-type{
+	text-align: center;
+	font-size: 22px;
+	font-weight: bold;
+	margin-bottom:40px;
+}
+.neir p:last-of-type{
+    line-height: 30px;
+    	
+}
+.neir img{
+	width:100%;
+	margin-bottom: 50px;
+}
+.bjt{
+	background-color: white;
+	opacity: 0.5;
+	height: 60px;
+	
+	margin-top: 30%;
+}
+.bjt p{
+	font-size: 30px;
+	text-align: center;
+	line-height: 60px;
+}
+.bjtt{
+	background-color: #7F7F7F;
+	height: 60px;
+	display: block;
+	position: absolute;
+	border-radius: 0px 0px 5px 5px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	}
+.img img{
+	height: 80px;
+	/*margin-right: 30px;*/
+}
+.imgdiv{
+	display: inline-block;
+	width: 300px;
+}
+.tubiao img{
+	width: 70px;
+}
+.tubiao p{
+	margin-top: 20px;
+	font-size: 15px;
+	margin-left: -40px;
+}
+.p{
+	margin-left: 45%;
+}
+.p p:first-of-type{
+	border-bottom: 2px solid #33A1FF;
+	width: 80px;
+}
+.mokuai{
+	margin-left: 180px;
+}
+.cebianmokuai{
+	background-color: #33A1FF;
+	width:50px;
+	margin-bottom: 150px;
+	height: 45px;
+	border-radius: 5px;
+}
+.cebianmokuai span{
+	color: white;
+	padding: 10px;
+
+}

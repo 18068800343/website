@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>产品中心</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>、
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="css/home.css"/>
+		<style>
+			#edui1_iframeholder{
+				overflow-x:hidden;
+				overflow-y:hidden;
+			}
+			.newsdiv{
+				height:100%;
+			}
+			.line-limit-length {
+				overflow:hidden; 
+				text-overflow:ellipsis;
+				display:-webkit-box; 
+				-webkit-box-orient:vertical;
+				-webkit-line-clamp:3; 
+			}
+			#lookcontrainer0 img{
+				width:496px;
+   				height:331px;
+   			}
+   			#lookcontrainer1 img{
+				width:496px;
+   				height:331px;
+   			}
+   			#lookcontrainer2 img{
+				width:496px;
+   				height:331px;
+   			}
+		</style>
+	</head>
+	<body>
+		<div class="body">
+		<div class="col-xs-12 head">
+			<div class="logo_div">
+				<img src="img/logo.png"/ class="logo">
+			</div>
+			<div class="navigation" style="margin-right: 10%;">
+				<a href="index.html" class="btn btn-default">首页</a>
+				<a href="qiyegaikuang.html" class="btn btn-default">企业概况</a>
+				<a href="chanpingzhongxin.html" class="btn btn-default">产品中心</a>
+				<a href="qiyezixun.html" class="btn btn-default">企业资讯</a>
+				<a href="jiarulengdian.html" class="btn btn-default">加入棱点</a>
+				<a href="" class="btn btn-default">关于我们</a>
+			</div>
+		</div>
+		</div>
+		<!--面包屑-->
+		<div class="mbx col-xs-1-12">
+			<p>首页＞产品中心＞案例详情</p>
+		</div>
+		<div class="neirong col-xs-12">
+			<div class="neir">
+				<p>智能化桥涵信息检测系统（交通)</p>
+				<p>为解决传统桥梁检测效率低、不规范、检测报告制作工作量巨大等问题，提升桥梁养护的科学化、精准化、时效化，智能化桥涵病害检测系统采用物联网技术、云计算技术，集成公路和市政桥涵检测规范，将病害检测、桥梁巡查、数据管理、养护决策、健康监测、分析预警等管养流程完整“嵌入”系统，实现了桥涵健康评定的智能化和桥捡报告的自动化，提高了业务操作效率大大缩短了病害处置反应时间,为桥涵养护提供决策支持。</p>
+			    <img src="img/xm1.png"/>
+			    <img src="img/xm1.png"/>
+			    <div>
+			    	<span>上一篇：已经没有了</span>
+			    	<span style="float: right;color: #3aa3ff;"><a href="">下一篇:棱点科技入选”2019年度南京市创新型企业100强”</a></span>
+			    </div>
+			</div>
+		</div>
+		<div class="foot col-xs-12">
+		<!--<img src="img/公司logo.jpg" class="foot_logo"/>-->
+		<div class="xxk col-xs-3">
+		     <p>关于棱点</p>
+		     <a href="">企业概况</a>
+		     <a href="">资质荣誉</a>
+		</div>
+		<div class="xxk col-xs-3">
+		     <p>产品中心</p>
+		     <a href="">业务方向</a>
+		     <a href="">典型案例</a>
+		</div>
+		<div class="xxk col-xs-3">
+		     <p>新闻中心</p>
+		     <a href="">企业咨询</a>
+		     
+		</div>
+		<div class="xxk col-xs-3">
+		     <p>加入棱点</p>
+		     <a href="">招聘信息</a>
+		     <a href="">联系我们</a>
+		</div>
+		 <div class="last" style="margin: 0 auto;width: 400px;text-align: center;color: #DEDEDE;margin-top: 50px;position: relative;top: 100px;">
+		 	<p>©2013-2021南京棱点信息科技有限公司版权所有</p>
+		 	<p>地址:南京市秦淮区永智路5号科技创业研发孵化综合楼F幢523室</p>
+		 </div>
+	</div>
+<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+</body>
+<script>
+    $(document).ready( function () {
+        initTable();
+	});
+    
+    function initTable(){
+    	$.ajax({
+            type: 'POST',
+            url: getContextPath()+'/xw/getlimitXW',
+            dataType: 'json',
+            data: {
+            	num:3,
+            },
+            success: function (json) {
+            	if(json!=null){
+            		for(var i=0;i<json.length;i++){
+            			$(".bk").after('<div class="newsdiv">'
+							        	 	+'<div style="width:496px;height:331px;" id="lookcontrainer'+i+'">'+json[i].xwPicter+'</div>'
+							        	 	+'<p id="bt'+i+'" style="text-align:left;display:block;font-size:18px;font-weight: bold;">'+json[i].xwBt+'</p>'
+							        	 	+'<p id="nr'+i+'" class="line-limit-length" style="text-indent:2em">'+json[i].xwNr+'</p>'
+							        	 	+'<span id="date1" style="text-align:left;display:block;">'+(json[i].xwDate.split(" ")[0])+'</span>'
+							        	 	+'<span><a href="" class="ahref">更多</a></span>'
+							        	 	+'</div>')
+            		}
+            	}
+            }
+      });
+    }
+    
+</script>
+</html>
