@@ -135,7 +135,7 @@
                         </div>
                         <div id="collapseOne" class="accordion-body collapse" style="height: 0px;margin-top: 30px;">
                             <div class="accordion-inner">
-								<p>职位描述：</p>
+                                <p>职位描述：</p>
                                 <p>岗位职责：</p>
                                 <p>1.负责公司C++产品/项目功能模块的详细设计、开发、测试；</p>
                                 <p>2.参与撰写需求分析说明书、概要设计、详细设计等相关技术文档；</p>
@@ -148,7 +148,7 @@
                                 <p>3.具有良好的设计习惯和代码架构规范。</p>
                                 <p>4.工作主动性强，具有良好的沟通、协作和执行能力，有团队精神。</p>
                                 <p>注：具体的薪资待遇面议。<br></p>
-							</div>
+                            </div>
                         </div>
                     </div>
                     <div class="accordion-group">
@@ -211,7 +211,7 @@
                             </div>
                         </div>
                     </div>
-                    <span  id="jianli" style="color: #33A1FF;font-size: 16px;font-weight: bold;">欢迎加入棱点！简历请发送至16621621@163.com</span>
+                    <span id="jianli" style="color: #33A1FF;font-size: 16px;font-weight: bold;">欢迎加入棱点！简历请发送至16621621@163.com</span>
                 </div>
             </div>
         </div>
@@ -253,58 +253,55 @@
 
     $(function () {
         change($("#value"));
-
     })
 
-    $("#value").bind('input propertychange', function() {     //propertychange，只要当前对象属性发生改变。（IE专属的
+    $("#value").bind('input propertychange', function () {     //propertychange，只要当前对象属性发生改变。（IE专属的
         change($("#value"))
     })
 
     let domArrayOriginal = new Array();
-
     let page_jianli = $("#jianli");
 
     function change(e) {
         let domArray = new Array();
-       let value = $(e).val();
+        let value = $(e).val();
 
-
-       if(domArrayOriginal.length>0){
-           for (let i = 0; i < domArrayOriginal.length; i++) {
-              let dom =  domArrayOriginal[i];
-               $(dom).find("p").each(function () {
-                   let text = $(this).text();
-                   let parentNode = $(this).parents(".accordion-group");
-                   if(""!=value&&text.indexOf(value)>=0){
-                       domArray.push(parentNode);
-                       return false;
-                   }
-               })
-           }
-       }else{
-           $(".accordion-group").each(function () {
-               let node = this;
+        if (domArrayOriginal.length > 0) {
+            for (let i = 0; i < domArrayOriginal.length; i++) {
+                let dom = domArrayOriginal[i];
+                $(dom).find("p").each(function () {
+                    let text = $(this).text();
+                    let parentNode = $(this).parents(".accordion-group");
+                    if ("" != value && text.indexOf(value) >= 0) {
+                        domArray.push(parentNode);
+                        return false;
+                    }
+                })
+            }
+        } else {
+            $(".accordion-group").each(function () {
+                let node = this;
                 $(this).find("p").each(function () {
                     let text = $(this).text();
                     // let parentNode = $(this).parents(".accordion-group");
-                    if(""!=value&&text.indexOf(value)>=0){
+                    if ("" != value && text.indexOf(value) >= 0) {
                         domArray.push(node);
                         return false;
                     }
                 })
-               domArrayOriginal.push(this);
-           });
-       }
+                domArrayOriginal.push(this);
+            });
+        }
 
         $("#accordion2").empty();
 
-        if(""!=value){
-            for (let i = 0; i <domArray.length ; i++) {
+        if ("" != value) {
+            for (let i = 0; i < domArray.length; i++) {
                 $("#accordion2").append(domArray[i]);
             }
             $("#num").text(domArray.length);
-        }else{
-            for (let i = 0; i <domArrayOriginal.length ; i++) {
+        } else {
+            for (let i = 0; i < domArrayOriginal.length; i++) {
                 $("#accordion2").append(domArrayOriginal[i]);
             }
             $("#num").text(domArrayOriginal.length);
