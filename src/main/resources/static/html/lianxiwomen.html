@@ -165,7 +165,7 @@
             },
             success: function (json) {
             	if(json!=null){
-            		for(var i=0;i<json.length;i++){
+            		for(let i=0;i<json.length;i++){
             			$(".bk").after('<div class="newsdiv">'
 							        	 	+'<div style="width:496px;height:331px;" id="lookcontrainer'+i+'">'+json[i].xwPicter+'</div>'
 							        	 	+'<p id="bt'+i+'" style="text-align:left;display:block;font-size:18px;font-weight: bold;">'+json[i].xwBt+'</p>'
@@ -179,20 +179,30 @@
       });
     }
              // 百度地图API功能
-        var map = new BMap.Map("allmap");
-        var point = new BMap.Point(118.879712,32.020557);
+        let map = new BMap.Map("allmap");
+        let point = new BMap.Point(118.879712,32.020557);
         map.centerAndZoom(point, 20);
-        var marker = new BMap.Marker(point);// 创建标注
+        let marker = new BMap.Marker(point);// 创建标注
+		let opts = {
+			width : 200,     // 信息窗口宽度
+			height: 100,     // 信息窗口高度
+			title : "南京棱点信息技术有限公司" , // 信息窗口标题
+			message:"这里是本公司"
+		}
+		let infoWindow = new BMap.InfoWindow("地址：秦淮区永智路5号创盈未来企业孵化器F栋523室", opts);  // 创建信息窗口对象
+		marker.addEventListener("click", function(){
+			map.openInfoWindow(infoWindow, point); //开启信息窗口
+		});
         map.addOverlay(marker);             // 将标注添加到地图中
         function showBorder() {
-            var projection = map.getMapType().getProjection();
-            var style = { strokeColor: "#6791e5", fillColor: "#4673cc", strokeWeight: 2, strokeOpacity: 0.9, fillOpacity: 0.2 };
-            var borderPts = [];
+            let projection = map.getMapType().getProjection();
+            let style = { strokeColor: "#6791e5", fillColor: "#4673cc", strokeWeight: 2, strokeOpacity: 0.9, fillOpacity: 0.2 };
+            let borderPts = [];
             // 缩放
             map.enableScrollWheelZoom(true);
             //区域边框由多个点组成
         }
-        showBorder();
+	showBorder();
 
 </script>
 </html>
