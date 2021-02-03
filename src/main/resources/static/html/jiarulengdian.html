@@ -211,7 +211,7 @@
                             </div>
                         </div>
                     </div>
-                    <span style="color: #33A1FF;font-size: 16px;font-weight: bold;">欢迎加入棱点！简历请发送至16621621@163.com</span>
+                    <span  id="jianli" style="color: #33A1FF;font-size: 16px;font-weight: bold;">欢迎加入棱点！简历请发送至16621621@163.com</span>
                 </div>
             </div>
         </div>
@@ -253,6 +253,7 @@
 
     $(function () {
         change($("#value"));
+
     })
 
     $("#value").bind('input propertychange', function() {     //propertychange，只要当前对象属性发生改变。（IE专属的
@@ -261,9 +262,12 @@
 
     let domArrayOriginal = new Array();
 
+    let page_jianli = $("#jianli");
+
     function change(e) {
         let domArray = new Array();
        let value = $(e).val();
+
 
        if(domArrayOriginal.length>0){
            for (let i = 0; i < domArrayOriginal.length; i++) {
@@ -306,6 +310,7 @@
             $("#num").text(domArrayOriginal.length);
         }
 
+        $("#accordion2").append(page_jianli);
 
     }
 
