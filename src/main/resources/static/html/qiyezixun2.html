@@ -59,6 +59,9 @@
 			padding: 5px;
 			z-index: 8;
 		}
+		#content,#content2{
+		text-indent:2em
+		}
 	</style>
 </head>
 <body>
@@ -87,6 +90,7 @@
 		<p><p style="text-align: left;" id="time"></p><p style="text-align: center;margin-top: -40px;">作者: <span id="author"></span></p><p style="text-align: right;margin-top: -40px;">浏览量: <span id="views"></span></p></p>
 		<p id="content"></p>
 		<img id="tu" src="" style="border-radius: 5px;">
+		<p id="content2"></p>
 		<div>
 			<span><a id="shang_yi_pian" href=""></a></span>
 			<span style="float: right;color: #3aa3ff;"><a id="xia_yi_pian" href=""></a></span>
@@ -174,6 +178,7 @@
 		}
 		$("#titleName").text(list[num].titleName);
 		$("#content").text(list[num].content);
+		$("#content2").text(list[num].content2);
 		$("#tu").attr('src', list[num].tu);
 		$("#time").text(list[num].time)
 		$("#views").text(list[num].views)
