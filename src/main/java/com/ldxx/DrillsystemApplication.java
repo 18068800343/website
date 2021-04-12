@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("com.ldxx.mapper")
-public class WebsiteApplication {
+public class DrillsystemApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(WebsiteApplication.class, args);
+        SpringApplication.run(DrillsystemApplication.class, args);
     }
 
 }
